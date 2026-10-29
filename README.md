@@ -1,4 +1,4 @@
-# Patient Vitals API — Persistent Storage with Docker Volumes
+# Patient Vitals API  Persistent Storage with Docker Volumes
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Volumes-2496ED?logo=docker&logoColor=white)
 ![Docker Compose](https://img.shields.io/badge/Docker%20Compose-Supported-2496ED?logo=docker&logoColor=white)
