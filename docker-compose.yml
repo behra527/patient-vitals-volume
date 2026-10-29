@@ -1,0 +1,14 @@
+services:
+  api:
+    build: .
+    image: behram527/patient-vitals-volume:1.0
+    ports:
+      - "8000:8000"
+    volumes:
+      # Named volume. Docker keeps this after the container is removed.
+      - vitals-data:/data
+      # Bind mount. Edit config/clinic.json on the host and the container sees it.
+      - ./config:/config:ro
+
+volumes:
+  vitals-data:
