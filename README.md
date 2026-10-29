@@ -1093,39 +1093,3 @@ The central lesson is that **container lifecycle and application data lifecycle 
 
 Containers can be replaced frequently. Persistent data should have an explicitly managed lifecycle of its own.
 
----
-
-## 19. Future Improvements
-
-Potential extensions include:
-
-1. Replace JSON-file persistence with SQLite or PostgreSQL.
-2. Add request-schema validation and consistent API error responses.
-3. Add automated integration tests for container recreation and data persistence.
-4. Add a documented backup and restore workflow.
-5. Add structured logging and application metrics.
-6. Add authentication and role-based authorization.
-7. Add a development configuration for live source-code changes.
-8. Add CI checks for image builds and regression tests.
-9. Add health checks and dependency-aware startup behavior.
-10. Add explicit data-retention and deletion policies.
-
-These improvements should be implemented according to the intended use case rather than added merely to increase project complexity.
-
----
-
-## 20. License
-
-This project is distributed under the MIT License, as indicated by the repository's license badge.
-
-If the repository does not yet contain a `LICENSE` file, add the actual MIT license text before claiming that the project is formally licensed under MIT.
-
----
-
-## Summary
-
-Patient Vitals API demonstrates a fundamental Docker design principle: **store persistent application data outside the container's disposable writable layer, and manage configuration separately from application-generated data.**
-
-The named volume keeps vital-sign records available across container replacement, while the read-only bind mount allows the host to supply updated clinic configuration without rebuilding the image.
-
-Together, these mechanisms provide a practical introduction to stateful container design, filesystem mounts, runtime permissions, and safe Docker storage management.
